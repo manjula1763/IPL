@@ -1,0 +1,27 @@
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaeeweb-app_3_1xsd" 
+version="3.1" metadata-complete="true">
+
+<display-name>Welcome to Tomcat</display-name>
+<description> Welcome to Tomcat </description>
+
+<servlet>
+<servlet-name>DropDown</servlet-name>
+<servlet-class>DropDown</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>DropDown</servlet-name>
+<url-pattern>/DropDown</url-pattern>
+</servlet-mapping>
+
+<servlet>
+<servlet-name>Student</servlet-name>
+<servlet-class>Student</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>Student</servlet-name>
+<url-pattern>/Student</url-pattern>
+</servlet-mapping>
+
+</web-app>
