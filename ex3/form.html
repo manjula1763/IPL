@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <center><h1><font size=:"10">FILL IN DETAILS TO GET INTO THE MINIONS WORLD</font></h1></center>
+        <title>Exer 3 </title>
+
+        <style>
+            body
+            {
+                background-color: lightgoldenrodyellow ;
+            }
+        </style>
+    </head>
+    <body>
+        <script language="javascript">
+            function validate()
+            {
+                flag=1;
+                if(document.myform.id.value=="" || document.myform.pwd.value=="" ||document.myform.dob.value=="" ||document.myform.shift.value=="" ||document.myform.mail.value=="" ||document.myform.phno.value=="" ||document.myform.aadhar.value=="" ||document.myform.bc.value=="" ||document.myform.wurl.value=="" )
+                {
+                    flag=0;
+                }
+                
+                var str=document.myform.phno.value;
+                var x;
+                for(var i=0;i<str.length;i++)
+                {
+                    x=str.substr(i,1);
+                    if(!(x<=9))
+                    {
+                        flag=2;
+                    }
+                }
+                if(flag==1)
+                {
+                    alert("Valid");
+                }
+                else if(flag==2)
+                {
+                    
+                    alert("Invalid phno");
+                    
+                }
+                else{
+                    alert("Invalid");
+                }
+            }
+        </script>
+
+        <form name ="myform" action="mini.html">
+            <div align="left">
+                LOGIN ID :<input type="text" name="id" id="id" required><br><br>
+                PASSWORD :<input type="password" name="pwd" id="pwd" required><br><br>
+                ADULT OR KID :<input type="radio" id="a" name="adult" value="adult">
+                <label for="a">adult</label>
+                <input type="radio" id="k" name="kid" value="kid">
+                <label for="k">kid</label><br><br>
+                DATE OF BIRTH:<input type="date" name="dob" id="dob" required><br><br>
+                CHOOSE MAX PLAY TIME <input type="time" id="shift" name="shift"><br><br>
+                EMAIL ID  :<input type="email" name="mail" id="mail" required><br><br>
+                PHONE NUMBER :<input type="text" name="phno" id="phno" required><br><br>
+                ADHAAR ID :<input type="number" name="aadhar" id="aadhar"required><br><br>
+                ATTACH BIRTH CERTIFICATE :<input type="file" name="bc" id="bc"required><br><br>
+                PANCARD URL :<input type="url" name="wurl" id="wurl"required><br><br>
+                FAVOURITE MINION :<input type="checkbox" id="i" name="cuis" value="bob">
+                <label for="i">bob</label>
+                <input type="checkbox" id="it" name="cuis" value="stuart">
+                <label for="it">stuart</label>
+                <input type="checkbox" id="c" name="cuis" value="kevin">
+                <label for="c">kevin</label> <br><br><br>
+
+            </div>
+            <div align="left">
+                <input type="submit" value="SUBMIT" id="submit" onclick="validate()"/>
+                <input type="reset" value="CLEAR">
+            </div>
+        </form>
+
+    </body>
+</html>
